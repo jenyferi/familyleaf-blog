@@ -40,7 +40,7 @@ Support: support@pixelunion.net
 <meta name="color:Outside Link Hover" content="#131313"/>
 <meta name="color:Outside Text" content="#616566"/>
 <meta name="font:Inside Heading" content="Helvetica Neue, Arial, sans-serif"/>
-<meta name="font:Inside Text" content="Georgia, serif"/>
+<meta name="font:Inside Text" content="Helvetica Neue, Arial, sans-serif"/>
 <meta name="font:Outside Heading" content="Helvetica Neue, Arial, sans-serif"/>	
 <meta name="font:Outside Text" content="Helvetica Neue, Arial, sans-serif"/>
 <meta name="image:Background" content=""/>
@@ -198,6 +198,9 @@ Support: support@pixelunion.net
 <meta property="og:image" content="{PortraitURL-64}"/>
 {/block:IndexPage}
 
+<!--typekit fonts-->
+<script type="text/javascript" src="//use.typekit.net/mtd2aqx.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <link rel="shortcut icon" href="{Favicon}" />
 <link rel="apple-touch-icon" href="{PortraitURL-128}" />
@@ -284,6 +287,115 @@ ol.notes li.tumblelog_{PlaintextName} { background-color:#fbfbfb; }
 ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 #page, .inner { margin:{block:IfCenteredLayout}0 auto{/block:IfCenteredLayout}{block:IfNotCenteredLayout}0 0 0 40px{/block:ifNotCenteredLayout}; } 
 
+/*page*/
+#page {
+	padding-top: 0px;
+}
+
+#top-banner-and-nav {
+	width: 100%;
+}
+
+/*banner*/
+#banner-image {
+	max-width: 100%;
+	width: 100%;
+}
+
+#banner-title {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -150px;
+	color: #ffffff;
+	font-family: 'cubano', sans-serif;
+}
+
+#banner-title a, #banner-title a:hover {
+	color: #ffffff;
+}
+
+#title-logo {
+	vertical-align: text-top;
+}
+
+#title-first {
+	font-size: 44px;
+	text-shadow: 0px 1px 1px #584833;
+}
+
+#title-second {
+	margin-top: -10px;
+	font-size: 24px;
+	text-shadow: 0px 1px 1px #584833;
+}
+
+.banner {
+	margin-bottom: 0px;
+}
+
+/*nav*/
+#navigation-bar {
+	margin-top: -7px;
+	height: 18px;
+	width: 100%;
+	background-image: url('http://i.imgur.com/cDrsy.png');
+}
+
+#navigation-wrapper {
+	margin: 0px auto;
+	width: 940px;
+}
+
+#navigation-tabs {
+	float: right;
+	font-family: 'cubano', sans-serif;
+}
+
+.navigation-tab {
+	text-shadow: 0px 1px 1px #e9cfaa;
+	background-image: url('http://i.imgur.com/cDrsy.png');
+	color: #443825;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
+	margin-left: 5px;
+}
+
+/*content*/
+#content {
+	margin-top: 40px;
+}
+
+/*sidebar*/
+#sidebar {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+/*body text*/
+.copy {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+}
+
+/*footer copyright*/
+.copyright {
+	font-size: 14px;
+}
+
+/*logo in sidebar*/
+#logo {
+	float: right;
+}
+
+/*search*/
+#search-form {
+	border: none;
+}
+
 /*archive link*/
 #archive-link {
 	text-align: right;
@@ -293,16 +405,60 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 #footer {
 	background-image: url('http://i.imgur.com/cDrsy.png');
 	color: #443825;
+	max-width: 100%;
+	width: 100%;
+	border-top: 3px solid #746756;
+}
+
+#footer-end {
+	width: 940px;
+	margin: 0px auto;
 }
 
 {CustomCSS}
+
 </style>
 
 <script src="http://static.tumblr.com/hugxd2w/6Cpm8gh20/modernizr.2.6.1.min.js"></script>
 </head>
 <body class="{block:IfContentWidth500}content-500 {/block:IfContentWidth500}{block:IfContentWidth600}content-600 {/block:IfContentWidth600}{block:IfContentWidth700}content-700 {/block:IfContentWidth700}{block:IndexPage}{block:IfInfiniteScrolling}infscroll {/block:IfInfiniteScrolling}{/block:IndexPage}{block:IfInvert}invert {/block:IfInvert}{block:IfInvertTopBar}invert-topbar {/block:IfInvertTopBar}{block:IfTopMenuWithLabels}menu-labels {/block:IfTopMenuWithLabels}{block:IfAlignTopMenuLeft}menu-left {/block:IfAlignTopMenuLeft}{block:IfRoundedPostCorners}round-corners {/block:IfRoundedPostCorners}{block:IfLargeSocialIcons}lg-icons {/block:IfLargeSocialIcons}{block:IfAutomaticHeadings}auto-headings {/block:IfAutomaticHeadings}{block:IfScaleImages}scale-images {/block:IfScaleImages}{block:PermalinkPage}singular {/block:PermalinkPage}{block:IfHideSidebar}hide-sidebar 
 {/block:IfHideSidebar}">
-<div id="header" class="pinned">
+
+<div id="top-banner-and-nav">
+	{block:IfBannerImage}
+
+	<div class="banner">
+		<a id="banner-link" href="/" title="{Title}"><img id="banner-image" src="{image:Banner}" alt="banner"/></a>
+		
+		<!--navigation-->
+		<div id="navigation-bar"></div>
+	</div>
+
+	{block:IfBannerImage}
+	{block:IfNotBannerImage}
+	{block:IfBlogTitleInPageHeader}
+	<div class="banner textual">
+		<h1 class="blog-title"><a href="/">{Title}</a></h1>
+		{block:IfTagline}<p class="tagline">{text:Tagline}</p>{/block:IfTagline}
+	</div>
+	{/block:IfBlogTitleInPageHeader}
+	{/block:IfNotBannerImage}
+
+	<div id="navigation-wrapper">
+		<div id="navigation-tabs">
+			<a class="navigation-tab" href="/tagged/company">Company News</a>
+			<a class="navigation-tab" href="/tagged/family">Featured Families</a>
+			<a class="navigation-tab" href="/tagged/team">Team</a>
+		</div>
+	</div>
+
+	<div id="banner-title">
+		<div id="title-first"><a id="banner-link" href="/" title="{Title}">The <img id="title-logo" src="http://i.imgur.com/EQY2r.png" title="logo" alt="logo"/> Blog</a></div>
+		<div id="title-second"><a id="banner-link" href="/" title="{Title}">Official news from the inside, lovely stories, and much more.</a></div>
+	</div>
+</div>
+
+<!--<div id="header" class="pinned">
 	<div class="inner">
 		{block:IfLogoInTopBar}
 		{block:IfLogoImage}<a href="/" title="{Title}" class="logo"><img src="{image:Logo}" alt="Logo" /></a>{/block:IfLogoImage}
@@ -336,25 +492,12 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 			{block:AskEnabled}<li><a class="ask" href="/ask"{block:IfNotTopMenuWithLabels} title="{AskLabel}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{AskLabel}</span></a></li>{/block:AskEnabled}
 			{block:SubmissionsEnabled}<li><a class="submit" href="/submit"{block:IfNotTopMenuWithLabels} title="{SubmitLabel}"{/block:IfNotTopMenuWithLabels}><span class="icon"></span><span class="label">{SubmitLabel}</span></a></li>{/block:SubmissionsEnabled}
 		</ul>
-	</div><!-- .inner -->
-	<div class="shadow"><span></span></div>
-</div><!-- /#header -->
+	</div>--><!-- .inner -->
+<!--</div>--><!-- /#header -->
 
 <!-- PAGE -->
-<div id="page" class="{block:IfLeftSidebar}left-sidebar{/block:IfLeftSidebar}{block:IfNotLeftSidebar}right-sidebar{/block:IfNotLeftSidebar} clearfix">
-	{block:IfBannerImage}
-	<div class="banner">
-		<a href="/"title="{Title}"><img id="banner" src="{image:Banner}" alt="banner"/></a>
-	</div>
-	{block:IfBannerImage}
-	{block:IfNotBannerImage}
-	{block:IfBlogTitleInPageHeader}
-	<div class="banner textual">
-		<h1 class="blog-title"><a href="/">{Title}</a></h1>
-		{block:IfTagline}<p class="tagline">{text:Tagline}</p>{/block:IfTagline}
-	</div>
-	{/block:IfBlogTitleInPageHeader}
-	{/block:IfNotBannerImage}
+<div id="page" class="{block:IfLeftSidebar}left-sidebar{/block:IfLeftSidebar}{block:IfNotLeftSidebar}right-sidebar{/block:IfNotLeftSidebar}">
+
 	<div id="content">
 		
 		<!-- BEGIN POSTS -->
@@ -774,47 +917,51 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 													<div id="back-to-top"><span class="icon"></span> <p>Top</p></div>
 													{/block:IfInfiniteScrolling}{/block:IndexPage}
 
-													<!-- FOOTER -->
-													<div id="footer">
-														{block:IfShowLikes}
-														{block:IfNotShowLikesInSidebar}
-														<!-- LIKES -->
-														{block:Likes}
-														<div id="likes-panel" class="footer-panel">
-															<h2>{text:Liked Posts Heading}</h2>
-															<a class="more-likes" href="/liked/by/{Name}">{lang:See more} &rarr;</a>
-															{block:IfContentWidth500}
-															{Likes limit="4" summarize="150" width="170"}
-															{/block:IfContentWidth500}
-
-															{block:IfContentWidth600}
-															{Likes limit="5" summarize="150" width="156"}
-															{/block:IfContentWidth600}
-
-															{block:IfContentWidth700}
-															{Likes limit="5" summarize="150" width="168"}
-															{/block:IfContentWidth700}
-														</div>
-														{/block:Likes}
-														<!-- END LIKES -->
-														{/block:IfNotShowLikesInSidebar}
-														{/block:IfShowLikes}
-														<div id="footer-end">
-															<div class="footer-copy">
-																<ul id="footer-links">
-																	<li><a href="/rss">{lang:RSS}</a></li>
-																	{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
-																	{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
-																	<li><a href="/mobile">{lang:Mobile}</a></li>
-																</ul>
-																<div id="footer-logo">
-																	<img src="http://i.imgur.com/sipHp.png" alt="familyleaf-logo">
-																</div>
-																{block:IfCopyrightText}<p class="copyright">{text:Copyright Text}.</p>{/block:IfCopyrightText}
-															</div>
-														</div><!-- /#footer-end -->
-													</div><!-- /#footer -->
 												</div><!-- /#page -->
+
+
+												<!-- FOOTER -->
+												<div id="footer">
+													{block:IfShowLikes}
+													{block:IfNotShowLikesInSidebar}
+													<!-- LIKES -->
+													{block:Likes}
+													<div id="likes-panel" class="footer-panel">
+														<h2>{text:Liked Posts Heading}</h2>
+														<a class="more-likes" href="/liked/by/{Name}">{lang:See more} &rarr;</a>
+														{block:IfContentWidth500}
+														{Likes limit="4" summarize="150" width="170"}
+														{/block:IfContentWidth500}
+
+														{block:IfContentWidth600}
+														{Likes limit="5" summarize="150" width="156"}
+														{/block:IfContentWidth600}
+
+														{block:IfContentWidth700}
+														{Likes limit="5" summarize="150" width="168"}
+														{/block:IfContentWidth700}
+													</div>
+													{/block:Likes}
+													<!-- END LIKES -->
+													{/block:IfNotShowLikesInSidebar}
+													{/block:IfShowLikes}
+													<div id="footer-end">
+														<div class="footer-copy">
+															<!--links-->
+															<ul id="footer-links">
+																<li><a href="/rss">{lang:RSS}</a></li>
+																{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+																{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+																<li><a href="/mobile">{lang:Mobile}</a></li>
+															</ul>
+															<!--logo-->
+															<div id="footer-logo">
+																<img src="http://i.imgur.com/sipHp.png" alt="familyleaf-logo">
+															</div>
+															{block:IfCopyrightText}<p class="copyright">{text:Copyright Text}.</p>{/block:IfCopyrightText}
+														</div>
+													</div><!-- /#footer-end -->
+												</div><!-- /#footer -->
 
 												<!-- Footer Scripts -->
 												<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
