@@ -275,7 +275,7 @@ a:hover { color:{color:Outside Link Hover}; font-weight:bold;}
 
 .copy a:hover, ol.notes a:hover { border-color:{color:Inside Link}; font-weight:bold; }
 
-.no-touch #notes-toggle:hover .icon, .touch #notes-toggle.up .icon, .photo-btns a:hover, #back-to-top .icon { background-color:{color:Inside Link}; }
+.no-touch #notes-toggle:hover .icon, .touch #notes-toggle.up .icon, .photo-btns a:hover, #back-to-top .icon { background-color: #ffffff; }
 
 /* Colored Area */
 .colored-panel, .colored-panel a, .colored-panel a:hover, .colored-panel .user-question, .pages a:hover, .invert-topbar .fixed .pages a:hover, .invert #sidebar .pages a:hover, .more-likes:hover, .like_link a:hover, #pagination .nextprev a:hover, #group-members li span, #followed li span { color:{color:Colored Area Text}; }
@@ -287,6 +287,34 @@ ol.notes li.tumblelog_{PlaintextName} { background-color:#fbfbfb; }
 ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 #page, .inner { margin:{block:IfCenteredLayout}0 auto{/block:IfCenteredLayout}{block:IfNotCenteredLayout}0 0 0 40px{/block:ifNotCenteredLayout}; } 
 
+/*body*/
+body {
+	color: #666666;
+}
+
+.ruled-top {
+	border: none;
+}
+
+.typekit-badge {
+	display: none !important;
+}
+
+.type-quote .quote-text {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	text-shadow: none;
+}
+
+.colored-panel {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: #ffffff !important;
+	border: none;
+	color: #666666 !important;
+}
+
 /*page*/
 #page {
 	padding-top: 0px;
@@ -294,19 +322,27 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 
 #top-banner-and-nav {
 	width: 100%;
+	background-image: url('http://i.imgur.com/WnKCW.png');
 }
 
 /*banner*/
-#banner-image {
-	max-width: 100%;
+.banner {
+	margin-top: 0px;
+	margin-bottom: 0px;
 	width: 100%;
+	height: 250px;
+	background-repeat: repeat-x;
+	background-position: 50% 0%;
+	max-height: 250px;
+	min-width: 975px;
+	background-image:url('http://i.imgur.com/hycXz.png'); 
 }
 
 #banner-title {
 	width: 940px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -150px;
+	margin-top: -122px;
 	color: #ffffff;
 	font-family: 'cubano', sans-serif;
 }
@@ -325,21 +361,20 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 }
 
 #title-second {
-	margin-top: -10px;
-	font-size: 24px;
+	margin-top: -8px;
+	font-size: 22px;
+	letter-spacing: 1px;
 	text-shadow: 0px 1px 1px #584833;
-}
-
-.banner {
-	margin-bottom: 0px;
 }
 
 /*nav*/
 #navigation-bar {
 	margin-top: -7px;
-	height: 18px;
+	height: 10px;
 	width: 100%;
 	background-image: url('http://i.imgur.com/cDrsy.png');
+    box-shadow: 0px 1px 5px #443825;
+    -webkit-box-shadow: 0px 1px 5px #443825;
 }
 
 #navigation-wrapper {
@@ -352,16 +387,29 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 	font-family: 'cubano', sans-serif;
 }
 
+#navigation-tab a {
+	opacity: 0.8;
+}
+
+#navigation-tab a:hover {
+	opacity: 0.8;
+}
+
 .navigation-tab {
 	text-shadow: 0px 1px 1px #e9cfaa;
 	background-image: url('http://i.imgur.com/cDrsy.png');
 	color: #443825;
-	padding-right: 5px;
-	padding-left: 5px;
+	margin-top: 7px;
+	padding-right: 10px;
+	padding-left: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 18px;
 	margin-left: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
 }
 
 /*content*/
@@ -369,16 +417,121 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 	margin-top: 40px;
 }
 
+.content-700 .right-sidebar #content {
+	margin-right: 40px;
+}
+
 /*sidebar*/
 #sidebar {
 	margin-top: 20px;
 	font-size: 14px;
+	width: 200px;
+}
+
+#sidebar h2 {
+	color: #666666;
+}
+
+#sidebar #search {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+	color: {color:Outside Link};
+}
+
+#search-form input {
+	border: none;
+	height: 30px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#twitter {
+	padding-top: 10px;
+}
+
+#tab-twitter {
+	text-transform: uppercase;
+}
+
+.lg-icons #socialize a {
+	width: 33px;
+	height: 33px;
+}
+
+#socialize a {
+	text-indent: 0px;
+	background-image: none;
+}
+
+#socialize li {
+	margin-bottom: 0px;
+	margin-right: 6px;
+}
+
+#socialize img {
+	width: 33px;
+	height: 33px;
 }
 
 /*body text*/
 .copy {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	font-size: 14px;
+}
+
+.copy a {
+	border: none;
+}
+
+.type-link .post-title a {
+	background-color: #ffffff;
+}
+
+.type-link .post-title a:hover {
+	background-color: #ffffff;
+	color: {color:Inside Link};
+}
+
+.copy a:hover {
+	border: none;
+	background-color: #ffffff;
+	color: {color:Inside Link};
+	text-decoration: underline;
+}
+
+.post {
+    margin-bottom: 40px;
+}
+
+.post .post-panel {
+	-webkit-box-shadow: 0px 0px 10px #bbbbbb;
+    box-shadow: 0px 0px 10px #bbbbbb;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.post-title, .content-700 .copy .post-title {
+	padding-left: 50px;
+	text-transform: uppercase;
+	color: #666666;
+	font-size: 18px;
+}
+
+.leafy {
+	margin-left: -5px;
+	margin-top: -60px;
+	position: absolute;
+	float: left;
 }
 
 /*footer copyright*/
@@ -396,13 +549,53 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 	border: none;
 }
 
-/*archive link*/
+/*pagination and arcive link*/
+#pagination {
+	margin-top: -15px;
+}
+
+#pagination a, #pagination .nextprev a {
+	background-color: #e7e7e7;
+	color: {color:Outside Link};
+	background-color: none !important;
+}
+
+#pagination a:hover, #pagination .nextprev a:hover {
+	background-color: #e7e7e7;
+	text-decoration: underline;
+	color: {color:Outside Link};
+	text-shadow: none;
+}
+
+#pagination .current-page {
+	font-size: 12px;
+	margin: 0px auto;
+	display: block;
+	float: none;
+	width: 100px;
+	text-transform: uppercase;
+}
+
+#pagination .current-page em {
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+#pagination .nextprev {
+	float: left;
+	font-size: 14px;
+}
+
 #archive-link {
-	text-align: right;
+	font-size: 14px;
+	float: right;
 }
 
 /*footer */
 #footer {
+	font-size: 14px;
 	background-image: url('http://i.imgur.com/cDrsy.png');
 	color: #443825;
 	max-width: 100%;
@@ -410,9 +603,51 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 	border-top: 3px solid #746756;
 }
 
+#footer-end a:hover {
+	text-decoration: underline;
+	color: #443825;
+}
+
+.footer-copy {
+	padding-top: 10px;
+	width: 470px;
+}
+
 #footer-end {
 	width: 940px;
 	margin: 0px auto;
+}
+
+#footer-links {
+	font-size: 14px;
+	width: 470px;
+	float: right;
+}
+
+#footerlinks-title {
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+#footer-links li {
+	border: none;
+	margin-bottom: 5px;
+	width: 470px;
+	padding-left: 0px;
+}
+
+#footer-links img {
+	vertical-align: middle;
+	opacity: 0.8;
+}
+
+#footer-links img:hover {
+	opacity: 1;
+}
+
+#mobile-link {
+	display: none;
+	padding-top: 30px;
 }
 
 {CustomCSS}
@@ -428,11 +663,13 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 	{block:IfBannerImage}
 
 	<div class="banner">
-		<a id="banner-link" href="/" title="{Title}"><img id="banner-image" src="{image:Banner}" alt="banner"/></a>
+		<!--<img id="banner-image" src="{image:Banner}" alt="banner"/>-->
 		
 		<!--navigation-->
-		<div id="navigation-bar"></div>
+		
 	</div>
+
+	<div id="navigation-bar"></div>
 
 	{block:IfBannerImage}
 	{block:IfNotBannerImage}
@@ -454,7 +691,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 
 	<div id="banner-title">
 		<div id="title-first"><a id="banner-link" href="/" title="{Title}">The <img id="title-logo" src="http://i.imgur.com/EQY2r.png" title="logo" alt="logo"/> Blog</a></div>
-		<div id="title-second"><a id="banner-link" href="/" title="{Title}">Official news from the inside, lovely stories, and much more.</a></div>
+		<div id="title-second">Official news from the inside, lovely stories, and much more.</div>
 	</div>
 </div>
 
@@ -507,7 +744,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 			{block:Text}
 			<div class="post-panel">
 				<div class="copy">
-					{block:Title}<h2 class="post-title">{Title}</h2>{/block:Title}
+					{block:Title}<h2 class="post-title">{Title}</h2><img class="leafy" src="http://i.imgur.com/fG3c9.png" title="leafy" alt="leafy" />{/block:Title}
 					{Body}
 				</div>
 				{/block:Text}
@@ -580,11 +817,20 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 							{/block:Photoset}
 
 							{block:Quote}
-							<div class="colored-panel">
-								<blockquote class="quote-text">{Quote}</blockquote>
-							</div>
+							<!--<div class="colored-panel">
+							</div>-->
+							
 							<div class="post-panel">
-								<div class="quote-nipple"></div>
+
+								<div class="copy">
+									<h2 class="post-title">
+										{Quote}
+									</h2>
+									<img class="leafy" src="http://i.imgur.com/fG3c9.png" title="leafy" alt="leafy" />
+								</div>
+								<!--<blockquote class="quote-text">{Quote}</blockquote>-->
+
+								<!--<div class="quote-nipple"></div>-->
 								{block:Source}<div class="copy">{Source}</div>{/block:Source}
 								{/block:Quote}
 
@@ -592,6 +838,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 								<div class="post-panel">
 									<div class="copy">
 										<h2 class="post-title"><a href="{URL}" {Target}>{Name}<span class="icon"></span></a></h2>
+											<img class="leafy" src="http://i.imgur.com/fG3c9.png" title="leafy" alt="leafy" />
 										{block:Description}{Description}{/block:Description}
 									</div>
 									{/block:Link}
@@ -600,7 +847,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 									<div class="post-panel">
 										<div class="copy">
 											{block:Title}
-											<h2 class="post-title">{Title}</h2>
+											<h2 class="post-title">{Title}</h2><img class="leafy" src="http://i.imgur.com/fG3c9.png" title="leafy" alt="leafy" />
 											{/block:Title}
 											<ul class="chat">
 												{block:Lines}
@@ -752,8 +999,14 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 														<div id="pagination">
 															<div class="current-page">{lang:Page CurrentPage of TotalPages 2}</div>
 															<div class="nextprev">
-																{block:PreviousPage}<a class="prev" href="{PreviousPage}">{/block:PreviousPage}<span>&larr; {lang:Newer}</span>{block:PreviousPage}</a>{/block:PreviousPage} <span class="sep">&bull;</span>
-																{block:NextPage}<a class="next" href="{NextPage}">{/block:NextPage}<span>{lang:Older} &rarr;</span>{block:NextPage}</a>{/block:NextPage}
+																{block:PreviousPage}<a class="prev" href="{PreviousPage}">{/block:PreviousPage}<span>&larr; Newer Stories</span>{block:PreviousPage}</a>{/block:PreviousPage} 
+																&nbsp;&nbsp;&nbsp;&nbsp;<!--<span class="sep">&bull;</span>-->
+																{block:NextPage}<a class="next" href="{NextPage}">{/block:NextPage}<span>Older Stories &rarr;</span>{block:NextPage}</a>{/block:NextPage}
+															</div>
+
+															<!-- PAGE LINKS -->
+															<div id="archive-link">
+																<a href="/archive">{lang:Archive}</a>
 															</div>
 														</div><!--/#pagination -->
 														{/block:Pagination}
@@ -766,10 +1019,7 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 														</div><!--/#pagination -->
 														{/block:PermalinkPagination}
 
-														<!-- PAGE LINKS -->
-														<div id="archive-link">
-															<a href="/archive">{lang:Archive}</a>
-														</div>
+										
 
 													</div><!-- /#content -->
 
@@ -829,14 +1079,35 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 																{block:IfCargoURL}<li class="cargo"><a href="{text:Cargo URL}" title="My Cargo Collective Site">My Cargo Collective Site</a></li>{/block:IfCargoURL}
 																{block:IfForrstUsername}<li class="forrst"><a href="http://forrst.com/people/{text:Forrst Username}" title="{text:Forrst Username} on Forrst">{text:Forrst Username} on Forrst</a></li>{/block:IfForrstUsername}
 																{block:IfFFFFoundUsername}<li class="ffffound"><a href="http://ffffound.com/home/{text:FFFFound Username}/found/" title="{text:FFFFound Username} on FFFFound">{text:FFFFound Username} on FFFFound</a></li>{/block:IfFFFFoundUsername}
-																{block:IfTwitterUsername}<li class="twitter"><a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter">@{text:Twitter Username} on Twitter</a></li>{/block:IfTwitterUsername}
-																{block:IfFacebookUsername}<li class="facebook"><a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile">Facebook Profile</a></li>{/block:IfFacebookUsername}
+																
+																
+																{block:IfFacebookUsername}
+																	<!--<li class="facebook"><a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile">Facebook Profile</a></li>-->
+																	<li><a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile"><img src="http://i.imgur.com/7wdq2.png" title="facebook" alt="facebook" /></a></li>					
+																{/block:IfFacebookUsername}
+
+																{block:IfTwitterUsername}
+																	<!--<li class="twitter"><a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter">@{text:Twitter Username} on Twitter</a></li>-->
+																	<li><a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter"><img src="http://i.imgur.com/fw4bN.png" title="twitter" alt="twitter" /></a></li>
+																{/block:IfTwitterUsername}
+																
 																{block:IfVimeoUsername}<li class="vimeo"><a href="http://www.vimeo.com/{text:Vimeo Username}" title="{text:Vimeo Username} on Vimeo">{text:Vimeo Username} on Vimeo</a></li>{/block:IfVimeoUsername}
 																{block:IfYoutubeUsername}<li class="youtube"><a href="http://www.youtube.com/{text:Youtube Username}" title="{text:Youtube Username} on Youtube">{text:Youtube Username} on Youtube</a></li>{/block:IfYoutubeUsername}
 																{block:IfFlickrUsername}<li class="flickr"><a href="http://www.flickr.com/photos/{text:Flickr Username}" title="{text:Flickr Username} on Flickr">{text:Flickr Username} on Flickr</a></li>{/block:IfFlickrUsername}
 																{block:IfDeliciousUsername}<li class="delicious"><a href="http://www.delicious.com/{text:Delicious Username}" title="{text:Delicious Username} on Delicious">{text:Delicious Username} on Delicious</a></li>{/block:IfDeliciousUsername}
 																{block:IfPinboardUsername}<li class="pinboard"><a href="http://pinboard.in/u:{text:Pinboard Username}" title="{text:Pinboard Username} on Pinboard">{text:Pinboard Username} on Pinboard</a></li>{/block:IfPinboardUsername}
-																{block:IfPinterestUsername}<li class="pinterest"><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">{text:Pinterest Username} on Pinterest</a></li>{/block:IfPinterestUsername}
+																
+																<!--email-->
+																<li><a href="mailto:founders@familyleaf.com" title="email"><img src="http://i.imgur.com/2LM15.png" title="email" alt="email" /></a></li>
+																
+																<!--rss-->
+																<li><a href="http://blog.familyleaf.com/rss" title="rss"><img src="http://i.imgur.com/fEXCH.png" title="rss" alt="rss" /></a></li>
+
+																{block:IfPinterestUsername}
+																	<!--<li class="pinterest"><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">{text:Pinterest Username} on Pinterest</a></li>-->
+																	<li><a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest"><img src="http://i.imgur.com/OXqLR.png" title="pinterest" alt="pinterest" /></a></li>
+																{/block:IfPinterestUsername}
+
 																{block:IfLastfmUsername}<li class="lastfm"><a href="http://www.last.fm/user/{text:Lastfm Username}" title="{text:Lastfm Username} on Last.fm">{text:Lastfm Username} on Last.fm</a></li>{/block:IfLastfmUsername}
 																{block:IfMyspaceFriendID}<li class="myspace"><a href="http://www.myspace.com/{text:Myspace Friend ID}" title="Myspace Profile">Myspace Profile</a></li>{/block:IfMyspaceFriendID}
 																{block:IfSoundcloudUsername}<li class="soundcloud"><a href="http://soundcloud.com/{text:Soundcloud Username}" title="{text:Soundcloud Username} on Soundcloud">{text:Soundcloud Username} on Soundcloud</a></li>{/block:IfSoundcloudUsername}
@@ -946,20 +1217,41 @@ ol.notes li.tumblelog_{PlaintextName} .action { font-weight:bold; }
 													{/block:IfNotShowLikesInSidebar}
 													{/block:IfShowLikes}
 													<div id="footer-end">
+														<!--left side-->
 														<div class="footer-copy">
-															<!--links-->
-															<ul id="footer-links">
-																<li><a href="/rss">{lang:RSS}</a></li>
-																{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
-																{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
-																<li><a href="/mobile">{lang:Mobile}</a></li>
-															</ul>
 															<!--logo-->
 															<div id="footer-logo">
 																<img src="http://i.imgur.com/sipHp.png" alt="familyleaf-logo">
 															</div>
 															{block:IfCopyrightText}<p class="copyright">{text:Copyright Text}.</p>{/block:IfCopyrightText}
+															
+															<div id="mobile-link"><a href="/mobile">{lang:Mobile} Site</a></div>
 														</div>
+														<!--links-->
+														<ul id="footer-links">
+															<div id ="footerlinks-title">
+																FamilyLeaf Around the Web
+															</div>
+															<li>
+																<a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile"><img src="http://i.imgur.com/idwLb.png" title="facebook" alt="facebook" /></a>
+																&nbsp;
+																<a href="http://www.facebook.com/{text:Facebook Username}" title="Facebook Profile">Facebook</a>
+															</li>					
+															<li>
+																<a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter"><img src="http://i.imgur.com/cbUJX.png" title="twitter" alt="twitter" /></a>
+																&nbsp;
+																<a href="http://www.twitter.com/{text:Twitter Username}" title="@{text:Twitter Username} on Twitter">Twitter</a>
+															</li>
+															<li>
+																<a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest"><img src="http://i.imgur.com/0BB2g.png" title="pinterest" alt="pinterest" /></a>
+																&nbsp;
+																<a href="http://pinterest.com/{text:Pinterest Username}" title="{text:Pinterest Username} on Pinterest">Pinterest</a>
+															</li>
+
+															<!--<li><a href="/rss">{lang:RSS}</a></li>-->
+															{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+															{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+														</ul>
 													</div><!-- /#footer-end -->
 												</div><!-- /#footer -->
 
